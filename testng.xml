@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="C:/Users/Kirankumar.J/IdeaProjects/IDIT/src/test/java/testcases">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="testcases.TC001_LoginTests">
+                <methods>
+                    <include name="verify_login"/>
+                    <include name="close_sessions"/>
+                </methods>
+            </class>
+
+            <class name="testcases.ContactCreationTest">
+             <methods>
+                 <include name="createContact"/>
+             </methods>
+            </class>
+
+            <class name="testcases.ContactSearchTest">
+                <methods>
+                    <include name="contactSearch"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
